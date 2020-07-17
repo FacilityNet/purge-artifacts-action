@@ -1,5 +1,7 @@
 # Delete artifacts action
 
+This is a fork. Original action by GitHub user kolpav.
+
 Action responsible for deleting old artifacts by setting expire duration.
 
 Hopefuly this is just temporary solution till github implements this functionality natively.
@@ -30,7 +32,7 @@ jobs:
   delete-artifacts:
     runs-on: ubuntu-latest
     steps:
-      - uses: kolpav/purge-artifacts-action@v1
+      - uses: facilitynet/purge-artifacts-action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           expire-in: 7days # Setting this to 0 will delete all artifacts
